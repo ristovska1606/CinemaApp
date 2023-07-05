@@ -1,0 +1,10 @@
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\bin\Debug\netcoreapp3.1\CinemaApp.Service.deps.json
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\bin\Debug\netcoreapp3.1\CinemaApp.Service.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\bin\Debug\netcoreapp3.1\CinemaApp.Service.pdb
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\obj\Debug\netcoreapp3.1\CinemaApp.Service.csproj.AssemblyReference.cache
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\obj\Debug\netcoreapp3.1\CinemaApp.Service.GeneratedMSBuildEditorConfig.editorconfig
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\obj\Debug\netcoreapp3.1\CinemaApp.Service.AssemblyInfoInputs.cache
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\obj\Debug\netcoreapp3.1\CinemaApp.Service.AssemblyInfo.cs
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\obj\Debug\netcoreapp3.1\CinemaApp.Service.csproj.CoreCompileInputs.cache
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\obj\Debug\netcoreapp3.1\CinemaApp.Service.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\obj\Debug\netcoreapp3.1\CinemaApp.Service.pdb

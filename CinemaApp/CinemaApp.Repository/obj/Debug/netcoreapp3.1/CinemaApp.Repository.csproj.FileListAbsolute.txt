@@ -1,0 +1,13 @@
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Repository\obj\Debug\netcoreapp3.1\CinemaApp.Repository.csproj.AssemblyReference.cache
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Repository\obj\Debug\netcoreapp3.1\CinemaApp.Repository.GeneratedMSBuildEditorConfig.editorconfig
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Repository\obj\Debug\netcoreapp3.1\CinemaApp.Repository.AssemblyInfoInputs.cache
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Repository\obj\Debug\netcoreapp3.1\CinemaApp.Repository.AssemblyInfo.cs
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Repository\obj\Debug\netcoreapp3.1\CinemaApp.Repository.csproj.CoreCompileInputs.cache
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Repository\bin\Debug\netcoreapp3.1\CinemaApp.Repository.deps.json
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Repository\bin\Debug\netcoreapp3.1\CinemaApp.Repository.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Repository\bin\Debug\netcoreapp3.1\CinemaApp.Repository.pdb
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Repository\bin\Debug\netcoreapp3.1\CinemaApp.Domain.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Repository\bin\Debug\netcoreapp3.1\CinemaApp.Domain.pdb
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Repository\obj\Debug\netcoreapp3.1\CinemaApp.Repository.csproj.CopyComplete
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Repository\obj\Debug\netcoreapp3.1\CinemaApp.Repository.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Repository\obj\Debug\netcoreapp3.1\CinemaApp.Repository.pdb
