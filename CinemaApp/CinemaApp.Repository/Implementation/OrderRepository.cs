@@ -1,13 +1,13 @@
-﻿using EShop.Domain;
-using EShop.Domain.DomainModels;
-using EShop.Repository.Interface;
+﻿using CinemaApp.Domain;
+using CinemaApp.Domain.DomainModels;
+using CinemaApp.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EShop.Repository.Implementation
+namespace CinemaApp.Repository.Implementation
 {
     public class OrderRepository : IOrderRepository
     {
@@ -22,18 +22,18 @@ namespace EShop.Repository.Implementation
         public List<Order> GetAllOrders()
         {
             return entities
-                .Include(z => z.ProductInOrders)
+                .Include(z => z.TicketsInOrder)
                 .Include(z => z.Owner)
-                .Include("ProductInOrders.Product")
+                .Include("TicketInOrder.Ticket")
                 .ToListAsync().Result;
         }
 
         public Order GetOrderDetails(BaseEntity model)
         {
             return entities
-                 .Include(z => z.ProductInOrders)
+                 .Include(z => z.TicketsInOrder)
                  .Include(z => z.Owner)
-                 .Include("ProductInOrders.Product")
+                 .Include("TicketsInOrder.Ticket")
                  .SingleOrDefaultAsync(z => z.Id == model.Id).Result;
         }
     }

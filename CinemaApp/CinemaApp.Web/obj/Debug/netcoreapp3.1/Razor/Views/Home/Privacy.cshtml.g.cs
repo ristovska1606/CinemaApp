@@ -21,13 +21,13 @@ using CinemaApp.Web;
 #nullable disable
 #nullable restore
 #line 2 "J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\Views\_ViewImports.cshtml"
-using CinemaApp.Web.Models;
+using CinemaApp.Domain.DomainModels;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"d8ddb6bffa5a9b264bf8f89038bf03c234083fd3", @"/Views/Home/Privacy.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"99cf39ce6ea0f1d17f14ffaffed841b7ba6cecd2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"df5af0dc5d5a2aa592ee3330f1ecf141731e8280", @"/Views/_ViewImports.cshtml")]
     #nullable restore
     public class Views_Home_Privacy : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable

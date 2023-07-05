@@ -1,12 +1,12 @@
-﻿using EShop.Domain;
-using EShop.Repository.Interface;
+﻿using CinemaApp.Domain;
+using CinemaApp.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EShop.Repository.Implementation
+namespace CinemaApp.Repository.Implementation
 {
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {

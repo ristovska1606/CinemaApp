@@ -55,7 +55,7 @@ namespace CinemaApp.Repository.Migrations
 
                     b.HasIndex("OwnerId");
 
-                    b.ToTable("Order");
+                    b.ToTable("Orders");
                 });
 
             modelBuilder.Entity("CinemaApp.Domain.DomainModels.ShoppingCart", b =>
@@ -89,6 +89,9 @@ namespace CinemaApp.Repository.Migrations
                         .HasColumnType("int");
 
                     b.Property<int>("TicketPrice")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TicketStatus")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

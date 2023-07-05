@@ -1,4 +1,5 @@
-﻿using CinemaApp.Domain.Relationships;
+﻿using CinemaApp.Domain.Enums;
+using CinemaApp.Domain.Relationships;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,6 +12,7 @@ namespace CinemaApp.Domain.DomainModels
         public int SeatNumber { get; set; }
         public Guid MovieId { get; set; }
         public Movie Movie { get; set; }
+        public TicketStatus TicketStatus { get; set; }
         public virtual ICollection<TicketInShoppingCart> TicketInShoppingCarts { get; set; }
         public virtual ICollection<TicketInOrder> TicketInOrders { get; set; }
     }

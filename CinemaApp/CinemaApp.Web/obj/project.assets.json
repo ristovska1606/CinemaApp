@@ -5984,6 +5984,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "CinemaApp.Domain >= 1.0.0",
       "CinemaApp.Repository >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.32",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.32",
@@ -6020,6 +6021,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "J:\\ФИНКИ\\my_github\\CinemaApp\\CinemaApp\\CinemaApp.Domain\\CinemaApp.Domain.csproj": {
+              "projectPath": "J:\\ФИНКИ\\my_github\\CinemaApp\\CinemaApp\\CinemaApp.Domain\\CinemaApp.Domain.csproj"
+            },
             "J:\\ФИНКИ\\my_github\\CinemaApp\\CinemaApp\\CinemaApp.Repository\\CinemaApp.Repository.csproj": {
               "projectPath": "J:\\ФИНКИ\\my_github\\CinemaApp\\CinemaApp\\CinemaApp.Repository\\CinemaApp.Repository.csproj"
             }

@@ -1,14 +1,14 @@
-﻿using EShop.Domain.IdentityModels;
+﻿using CinemaApp.Domain.IdentityModel;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace EShop.Repository.Interface
+namespace CinemaApp.Repository.Interface
 {
     public interface IUserRepository
     {
-        IEnumerable<EShopApplicationUser> GetAll();
-        EShopApplicationUser Get(string id);
+        IEnumerable<CinemaAppUser> GetAll();
+        CinemaAppUser Get(string id);
         
     }
 }

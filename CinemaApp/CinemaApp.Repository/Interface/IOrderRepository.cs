@@ -1,10 +1,10 @@
-﻿using EShop.Domain;
-using EShop.Domain.DomainModels;
+﻿using CinemaApp.Domain;
+using CinemaApp.Domain.DomainModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace EShop.Repository.Interface
+namespace CinemaApp.Repository.Interface
 {
     public interface IOrderRepository
     {

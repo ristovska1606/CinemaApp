@@ -1,9 +1,9 @@
-﻿    using EShop.Domain;
+﻿using CinemaApp.Domain;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace EShop.Repository.Interface
+namespace CinemaApp.Repository.Interface
 {
     public interface IRepository<T> where T : BaseEntity
     {

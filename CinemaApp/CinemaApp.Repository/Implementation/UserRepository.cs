@@ -1,38 +1,38 @@
-﻿using EShop.Domain.IdentityModels;
-using EShop.Repository.Interface;
+﻿using CinemaApp.Domain.IdentityModel;
+using CinemaApp.Repository.Interface;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EShop.Repository.Implementation
+namespace CinemaApp.Repository.Implementation
 {
     public class UserRepository : IUserRepository
     {
         private readonly ApplicationDbContext _context;
-        private DbSet<EShopApplicationUser> entities;
+        private DbSet<CinemaAppUser> entities;
 
         public UserRepository(ApplicationDbContext context)
         {
             _context = context;
-            entities = _context.Set<EShopApplicationUser>();
+            entities = _context.Set<CinemaAppUser>();
         }
-        public EShopApplicationUser Get(string id)
+        public CinemaAppUser Get(string id)
         {
             return entities
-                .Include(z => z.UserShoppingCart)
-                .Include("UserShoppingCart.ProductInShoppingCarts")
-                .Include("UserShoppingCart.ProductInShoppingCarts.Product")
+                .Include(z => z.ShoppingCart)
+                .Include("ShoppingCart.TicketInShoppingCarts")
+                .Include("ShoppingCart.TicketInShoppingCarts.Ticket")
                 .SingleOrDefault(z => z.Id == id);
                 
         }
 
-        public IEnumerable<EShopApplicationUser> GetAll()
+        public IEnumerable<CinemaAppUser> GetAll()
         {
-            return entities.Include(z => z.UserShoppingCart)
-                .Include("UserShoppingCart.ProductInShoppingCarts")
-                .Include("UserShoppingCart.ProductInShoppingCarts.Product")
+            return entities.Include(z => z.ShoppingCart)
+                .Include("ShoppingCart.TicketInShoppingCarts")
+                .Include("ShoppingCart.TicketInShoppingCarts.Ticket")
                 .AsEnumerable();
         }
     }

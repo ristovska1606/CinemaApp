@@ -167,6 +167,9 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
+              "J:\\ФИНКИ\\my_github\\CinemaApp\\CinemaApp\\CinemaApp.Domain\\CinemaApp.Domain.csproj": {
+                "projectPath": "J:\\ФИНКИ\\my_github\\CinemaApp\\CinemaApp\\CinemaApp.Domain\\CinemaApp.Domain.csproj"
+              },
               "J:\\ФИНКИ\\my_github\\CinemaApp\\CinemaApp\\CinemaApp.Repository\\CinemaApp.Repository.csproj": {
                 "projectPath": "J:\\ФИНКИ\\my_github\\CinemaApp\\CinemaApp\\CinemaApp.Repository\\CinemaApp.Repository.csproj"
               }
