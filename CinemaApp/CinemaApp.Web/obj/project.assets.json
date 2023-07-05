@@ -1805,6 +1805,20 @@
         "runtime": {
           "bin/placeholder/CinemaApp.Repository.dll": {}
         }
+      },
+      "CinemaApp.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "CinemaApp.Domain": "1.0.0",
+          "CinemaApp.Repository": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CinemaApp.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CinemaApp.Service.dll": {}
+        }
       }
     }
   },
@@ -5980,12 +5994,18 @@
       "type": "project",
       "path": "../CinemaApp.Repository/CinemaApp.Repository.csproj",
       "msbuildProject": "../CinemaApp.Repository/CinemaApp.Repository.csproj"
+    },
+    "CinemaApp.Service/1.0.0": {
+      "type": "project",
+      "path": "../CinemaApp.Service/CinemaApp.Service.csproj",
+      "msbuildProject": "../CinemaApp.Service/CinemaApp.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "CinemaApp.Domain >= 1.0.0",
       "CinemaApp.Repository >= 1.0.0",
+      "CinemaApp.Service >= 1.0.0",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.32",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.32",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.32",
@@ -6026,6 +6046,9 @@
             },
             "J:\\ФИНКИ\\my_github\\CinemaApp\\CinemaApp\\CinemaApp.Repository\\CinemaApp.Repository.csproj": {
               "projectPath": "J:\\ФИНКИ\\my_github\\CinemaApp\\CinemaApp\\CinemaApp.Repository\\CinemaApp.Repository.csproj"
+            },
+            "J:\\ФИНКИ\\my_github\\CinemaApp\\CinemaApp\\CinemaApp.Service\\CinemaApp.Service.csproj": {
+              "projectPath": "J:\\ФИНКИ\\my_github\\CinemaApp\\CinemaApp\\CinemaApp.Service\\CinemaApp.Service.csproj"
             }
           }
         }

@@ -13,6 +13,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CinemaApp.Repository;
+using CinemaApp.Repository.Implementation;
+using CinemaApp.Repository.Interface;
+using CinemaApp.Service.Interface;
 
 namespace CinemaApp.Web
 {
@@ -35,6 +38,16 @@ namespace CinemaApp.Web
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
+            services.AddScoped(typeof(IOrderRepository), typeof(OrderRepository));
+
+
+            services.AddTransient<ITicketService, Service.Implementation.ProductService>();
+            services.AddTransient<IShoppingCartService, Service.Implementation.ShoppingCartService>();
+            services.AddTransient<IOrderService, Service.Implementation.OrderService>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
