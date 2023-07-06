@@ -31,6 +31,9 @@ namespace CinemaApp.Repository.Migrations
                     b.Property<string>("MovieTitle")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("TicketPrice")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("ValidFrom")
                         .HasColumnType("datetime2");
 

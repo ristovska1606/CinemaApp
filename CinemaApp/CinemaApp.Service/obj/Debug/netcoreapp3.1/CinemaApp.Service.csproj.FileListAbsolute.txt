@@ -11,3 +11,5 @@ J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\obj\Debug\netcorea
 J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\bin\Debug\netcoreapp3.1\CinemaApp.Domain.dll
 J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\bin\Debug\netcoreapp3.1\CinemaApp.Domain.pdb
 J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\obj\Debug\netcoreapp3.1\CinemaApp.Service.csproj.CopyComplete
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\bin\Debug\netcoreapp3.1\CinemaApp.Repository.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Service\bin\Debug\netcoreapp3.1\CinemaApp.Repository.pdb

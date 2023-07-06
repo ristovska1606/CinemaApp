@@ -9,7 +9,7 @@ namespace Cinema.Service.Interface
 {
     public interface IShoppingCartService
     {
-        public ShoppingCartDto GetProductForShoppingCart(string userId);
+        public ShoppingCartDto GetTicketForShoppingCart(string userId);
 
         public TicketInShoppingCart DeleteTicketFromShoppingCart(Guid? ticketId, string userId);
 

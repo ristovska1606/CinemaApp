@@ -15,5 +15,13 @@ namespace CinemaApp.Domain.DomainModels
         public TicketStatus TicketStatus { get; set; }
         public virtual ICollection<TicketInShoppingCart> TicketInShoppingCarts { get; set; }
         public virtual ICollection<TicketInOrder> TicketInOrders { get; set; }
+
+        public Ticket(int TicketPrice, int SeatNumber, Guid movieId)
+        {
+            this.TicketPrice = TicketPrice;
+            this.SeatNumber = SeatNumber;
+            this.MovieId = movieId;
+            TicketStatus = TicketStatus.AVAILABLE;
+        }
     }
 }

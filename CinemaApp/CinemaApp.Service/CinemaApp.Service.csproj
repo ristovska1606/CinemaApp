@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CinemaApp.Domain\CinemaApp.Domain.csproj" />
+    <ProjectReference Include="..\CinemaApp.Repository\CinemaApp.Repository.csproj" />
   </ItemGroup>
 
 </Project>

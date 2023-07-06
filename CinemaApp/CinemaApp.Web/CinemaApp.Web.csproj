@@ -11,11 +11,13 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.32" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.32" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.32" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CinemaApp.Domain\CinemaApp.Domain.csproj" />
     <ProjectReference Include="..\CinemaApp.Repository\CinemaApp.Repository.csproj" />
+    <ProjectReference Include="..\CinemaApp.Service\CinemaApp.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>

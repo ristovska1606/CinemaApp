@@ -10,6 +10,7 @@ namespace CinemaApp.Domain.DomainModels
         public string MovieCover { get; set; }
         public DateTime ValidFrom { get; set; }
         public DateTime ValidTo { get; set; }
+        public int TicketPrice { get; set; }
         public virtual ICollection<Ticket> Tickets { get; set; } = new List<Ticket>();
     }
 }

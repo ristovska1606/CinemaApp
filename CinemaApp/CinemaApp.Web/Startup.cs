@@ -16,6 +16,7 @@ using CinemaApp.Repository;
 using CinemaApp.Repository.Implementation;
 using CinemaApp.Repository.Interface;
 using CinemaApp.Service.Interface;
+using Cinema.Service.Interface;
 
 namespace CinemaApp.Web
 {
@@ -44,7 +45,8 @@ namespace CinemaApp.Web
             services.AddScoped(typeof(IOrderRepository), typeof(OrderRepository));
 
 
-            services.AddTransient<ITicketService, Service.Implementation.ProductService>();
+            services.AddTransient<ITicketService, Service.Implementation.TicketService>();
+            services.AddTransient<IMovieService, Service.Implementation.MovieService>();
             services.AddTransient<IShoppingCartService, Service.Implementation.ShoppingCartService>();
             services.AddTransient<IOrderService, Service.Implementation.OrderService>();
 
@@ -68,9 +70,10 @@ namespace CinemaApp.Web
             app.UseStaticFiles();
 
             app.UseRouting();
-
             app.UseAuthentication();
             app.UseAuthorization();
+           
+                       
 
             app.UseEndpoints(endpoints =>
             {
@@ -78,6 +81,7 @@ namespace CinemaApp.Web
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
+                endpoints.MapControllers();
             });
         }
     }

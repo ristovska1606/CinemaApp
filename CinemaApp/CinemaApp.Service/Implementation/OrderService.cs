@@ -1,14 +1,13 @@
-﻿using EShop.Domain;
-using EShop.Domain.DomainModels;
-using EShop.Domain.Relationship;
-using EShop.Repository.Interface;
-using EShop.Service.Interface;
+﻿using CinemaApp.Domain;
+using CinemaApp.Domain.DomainModels;
+using CinemaApp.Repository.Interface;
+using CinemaApp.Service.Interface;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace EShop.Service.Implementation
+namespace CinemaApp.Service.Implementation
 {
     public class OrderService : IOrderService
     {

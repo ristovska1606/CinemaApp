@@ -1,111 +1,114 @@
-﻿using EShop.Domain.DomainModels;
-using EShop.Domain.DTO;
-using EShop.Domain.Relationship;
-using EShop.Repository.Interface;
-using EShop.Service.Interface;
+﻿using CinemaApp.Domain.DomainModels;
+using CinemaApp.Domain.DTO;
+using CinemaApp.Domain.Enums;
+using CinemaApp.Domain.Relationships;
+using CinemaApp.Repository.Interface;
+using CinemaApp.Service.Interface;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EShop.Service.Implementation
+namespace CinemaApp.Service.Implementation
 {
-    public class ProductService : IProductService
+    public class TicketService : ITicketService
     {
-        private readonly IRepository<Product> _productRepository;
-        private readonly IRepository<ProductInShoppingCart> _productInShoppingCartRepository;
+        private readonly IRepository<Ticket> _ticketRepository;
+        private readonly IRepository<TicketInShoppingCart> _ticketInShoppingCartRepository;
         private readonly IUserRepository _userRepository;
-        private readonly ILogger<ProductService> _logger;
+        
 
-        public ProductService(IRepository<Product> productRepository,ILogger<ProductService> logger, IRepository<ProductInShoppingCart> productInShoppingCartRepository, IUserRepository userRepository)
+        public TicketService(IRepository<Ticket> ticketRepository, IRepository<TicketInShoppingCart> ticketInShoppingCartRepository, IUserRepository userRepository)
         {
-            _productRepository = productRepository;
-            _productInShoppingCartRepository = productInShoppingCartRepository;
+            _ticketRepository = ticketRepository;
+            _ticketInShoppingCartRepository = ticketInShoppingCartRepository;
             _userRepository = userRepository;
-            _logger = logger;
+           
         }
 
-        public Boolean AddProductInShoppingCart(AddToShoppingCardDto entity, string userId)
+        public Boolean AddTicketInShoppingCart(AddToShoppingCardDto entity, string userId)
         {
-            var product = this.GetSpecificProduct(entity.SelectedProductId);
+            var ticket = this.GetSpecificTicket(entity.SelectedTicketId);
 
             var loggedInUser = _userRepository.Get(userId);
 
-            var UserCart = loggedInUser.UserShoppingCart;
+            var UserCart = loggedInUser.ShoppingCart;
 
-            if (product != null && loggedInUser != null && UserCart != null)
+            if (ticket != null && loggedInUser != null && UserCart != null)
             {
-                var itemToAdd = new ProductInShoppingCart
+                var itemToAdd = new TicketInShoppingCart
                 {
                     Id = Guid.NewGuid(),
                     ShoppingCart = UserCart,
-                    Product = product,
-                    ProductId = product.Id,
-                    ShoppingCartId = UserCart.Id,
-                    Quantity = entity.Quantity
+                    Ticket = ticket,
+                    TicketId = ticket.Id,
+                    ShoppingCartId = UserCart.Id
                 };
 
-                _productInShoppingCartRepository.Insert(itemToAdd);
+                _ticketInShoppingCartRepository.Insert(itemToAdd);
 
-                _logger.LogInformation("Product was successfully added into ShoppingCart.");
+                
                 return true;
             }else
             {
-                _logger.LogInformation("Something was wrong. ProductId or UserShoppingCart are not available.");
+              
                 return false;
             }
             
         }
 
-        public Product CreateNewProduct(Product newEntity)
+        public void ChangeTicketStatus(Guid? id)
         {
-            newEntity.Id = Guid.NewGuid();
-            return _productRepository.Insert(newEntity);
+            _ticketRepository.Get(id).TicketStatus = TicketStatus.UNAVAILABLE;
         }
 
-        public Product DeleteProduct(Guid? id)
+        public Ticket CreateNewTicket(Ticket newEntity)
         {
-            var poductToDelete = this.GetSpecificProduct(id);
-            return _productRepository.Delete(poductToDelete);
+            newEntity.Id = Guid.NewGuid();
+            return _ticketRepository.Insert(newEntity);
+        }
+
+        public Ticket DeleteTicket(Guid? id)
+        {
+            var ticketToDelete = this.GetSpecificTicket(id);
+            return _ticketRepository.Delete(ticketToDelete);
         }
 
         public AddToShoppingCardDto GetAddToShoppingCartDto(Guid? id)
         {
-            var selectedProduct = this.GetSpecificProduct(id);
+            var selectedTicket = this.GetSpecificTicket(id);
 
 
             var model = new AddToShoppingCardDto
             {
-                SelectedProduct = selectedProduct,
-                SelectedProductId = selectedProduct.Id,
-                Quantity = 1
+                SelectedTicket = selectedTicket,
+                SelectedTicketId = selectedTicket.Id
             };
 
             return model;
         }
 
-        public List<Product> GetAllProductAsList()
+        public List<Ticket> GetAllTicketsAsList()
         {
-            _logger.LogInformation("GetAllProductAsList was called.");
-            return _productRepository.GetAll().ToList();
+            return _ticketRepository.GetAll().ToList();
         }
 
-        public Product GetSpecificProduct(Guid? id)
+        public Ticket GetSpecificTicket(Guid? id)
         {
-            return _productRepository.Get(id);
+            return _ticketRepository.Get(id);
         }
 
-        public bool ProductExist(Guid? id)
+        public bool TicketExist(Guid? id)
         {
-            var productExist = this.GetSpecificProduct(id);
+            var ticketExist = this.GetSpecificTicket(id);
 
-            return productExist != null;
+            return ticketExist != null;
         }
 
-        public Product UpdateExistingProduct(Product updatedProduct)
+        public Ticket UpdateExistingTicket(Ticket updatedTicket)
         {
-            return _productRepository.Update(updatedProduct);
+            return _ticketRepository.Update(updatedTicket);
         }
     }
 }
