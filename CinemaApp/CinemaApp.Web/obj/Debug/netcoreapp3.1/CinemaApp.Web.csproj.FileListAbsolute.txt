@@ -175,3 +175,6 @@ J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\bin\Debug\netcoreapp3.
 J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\bin\Debug\netcoreapp3.1\CinemaApp.Service.pdb
 J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Create.cshtml.g.cs
 J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Index.cshtml.g.cs
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Delete.cshtml.g.cs
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Details.cshtml.g.cs
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingCart\Index.cshtml.g.cs

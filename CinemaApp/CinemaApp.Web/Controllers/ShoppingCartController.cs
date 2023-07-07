@@ -1,4 +1,4 @@
-﻿using EShop.Service.Interface;
+﻿using Cinema.Service.Interface;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
-namespace EShop.Web.Controllers
+namespace CinemaApp.Web.Controllers
 {
     [Authorize]
     public class ShoppingCartController : Controller
@@ -25,7 +25,7 @@ namespace EShop.Web.Controllers
         {
             var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-            return View(_shoppingCartService.GetProductForShoppingCart(userId));
+            return View(_shoppingCartService.GetTicketForShoppingCart(userId));
         }
 
         public IActionResult Delete(Guid? id)
@@ -34,7 +34,7 @@ namespace EShop.Web.Controllers
 
             if (!string.IsNullOrEmpty(userId))
             {
-                _shoppingCartService.DeleteProductFromShoppingCart(id, userId);
+                _shoppingCartService.DeleteTicketFromShoppingCart(id, userId);
             }
 
             return RedirectToAction("Index", "ShoppingCart");

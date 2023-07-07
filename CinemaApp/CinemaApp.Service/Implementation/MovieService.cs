@@ -32,6 +32,26 @@ namespace CinemaApp.Service.Implementation
             }
             return _movieRepository.Insert(newEntity);
         }
+         public Movie CreateNewMovieWithParametars(String MovieTitle, String MovieCover, DateTime ValidFrom, DateTime ValidTo, String TicketPrice)
+        {
+            Movie newEntity = new Movie();
+            newEntity.Id = Guid.NewGuid();
+            newEntity.MovieTitle= MovieTitle;
+            newEntity.MovieCover= MovieCover;
+            newEntity.ValidFrom= ValidFrom;
+            newEntity.ValidTo= ValidTo;
+            newEntity.TicketPrice = Convert.ToInt16(TicketPrice);
+            _movieRepository.Insert(newEntity);
+
+
+            for (int i = 0; i < 20; i++)
+            {
+
+                Ticket ticketToInsert = new Ticket(Convert.ToInt16(TicketPrice), i+1, newEntity.Id);
+                _ticketRepository.Insert(ticketToInsert);
+            }
+            return newEntity;
+        }
 
         public Movie DeleteMovie(Guid? id)
         {
