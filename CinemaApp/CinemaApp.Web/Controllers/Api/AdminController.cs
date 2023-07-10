@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
 
-namespace EShop.Web.Controllers.Api
+namespace CinemaApp.Web.Controllers.Api
 {
     [Route("api/[controller]")]
     [ApiController]
