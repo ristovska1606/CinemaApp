@@ -22,8 +22,8 @@ namespace CinemaApp.Repository
         public virtual DbSet<TicketInShoppingCart> TicketInShoppingCarts { get; set; }
         public virtual DbSet<TicketInOrder> TicketInOrders { get; set; }
         public virtual DbSet<Order> Orders { get; set; }
-        
-    
+        public virtual DbSet<EmailMessage> EmailMessages { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

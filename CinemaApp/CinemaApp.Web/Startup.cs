@@ -17,14 +17,21 @@ using CinemaApp.Repository.Implementation;
 using CinemaApp.Repository.Interface;
 using CinemaApp.Service.Interface;
 using Cinema.Service.Interface;
+using CinemaApp.Domain;
+using CinemaApp.Service.Implementation;
+using CinemaApp.Service;
+using NETCore.MailKit.Core;
 
 namespace CinemaApp.Web
 {
     public class Startup
     {
+        private EmailSettings emailService;
         public Startup(IConfiguration configuration)
         {
+            emailService = new EmailSettings();
             Configuration = configuration;
+            Configuration.GetSection("EmailSettings").Bind(emailService);
         }
 
         public IConfiguration Configuration { get; }
@@ -49,6 +56,11 @@ namespace CinemaApp.Web
             services.AddTransient<IMovieService, Service.Implementation.MovieService>();
             services.AddTransient<IShoppingCartService, Service.Implementation.ShoppingCartService>();
             services.AddTransient<IOrderService, Service.Implementation.OrderService>();
+
+            services.AddScoped<EmailSettings>(es => emailService);
+            services.AddScoped<Service.Interface.IEmailService, Service.Implementation.EmailService>(email => new Service.Implementation.EmailService(emailService));
+            services.AddScoped<IBackgroundEmailSender, BackgroundEmailSender>();
+            services.AddHostedService<EmailScopedHostedService>();
 
         }
 

@@ -1,6 +1,7 @@
 ﻿using CinemaApp.Domain;
 using CinemaApp.Domain.DomainModels;
-using EShop.Service.Interface;
+using CinemaApp.Service.Interface;
+using MailKit.Security;
 using MimeKit;
 using System;
 using System.Collections.Generic;

@@ -178,3 +178,13 @@ J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\obj\Debug\netcoreapp3.
 J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Delete.cshtml.g.cs
 J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\obj\Debug\netcoreapp3.1\Razor\Views\Movies\Details.cshtml.g.cs
 J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\obj\Debug\netcoreapp3.1\Razor\Views\ShoppingCart\Index.cshtml.g.cs
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\bin\Debug\netcoreapp3.1\BouncyCastle.Cryptography.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\bin\Debug\netcoreapp3.1\MailKit.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\bin\Debug\netcoreapp3.1\MimeKit.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\bin\Debug\netcoreapp3.1\NETCore.MailKit.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\bin\Debug\netcoreapp3.1\System.Formats.Asn1.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Cng.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\bin\Debug\netcoreapp3.1\System.Security.Cryptography.Pkcs.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\bin\Debug\netcoreapp3.1\System.Text.Encoding.CodePages.dll
+J:\ФИНКИ\my_github\CinemaApp\CinemaApp\CinemaApp.Web\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Security.Cryptography.Cng.dll

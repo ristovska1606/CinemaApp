@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace EShop.Domain.DomainModels
+namespace CinemaApp.Domain.DomainModels
 {
     public class EmailMessage : BaseEntity
     {

@@ -1,13 +1,14 @@
-﻿using EShop.Domain.DomainModels;
-using EShop.Repository.Interface;
-using EShop.Service.Interface;
+﻿
+using CinemaApp.Domain.DomainModels;
+using CinemaApp.Repository.Interface;
+using CinemaApp.Service.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EShop.Service.Implementation
+namespace CinemaApp.Service.Implementation
 {
     public class BackgroundEmailSender : IBackgroundEmailSender
     {

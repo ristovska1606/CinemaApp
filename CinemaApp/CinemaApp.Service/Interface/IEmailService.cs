@@ -1,10 +1,10 @@
-﻿using EShop.Domain.DomainModels;
+﻿using CinemaApp.Domain.DomainModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EShop.Service.Interface
+namespace CinemaApp.Service.Interface
 {
     public interface IEmailService
     {
