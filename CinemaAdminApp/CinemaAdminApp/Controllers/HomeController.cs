@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace EShopAdminApplication.Controllers
+namespace CinemaAdminApp.Controllers
 {
     public class HomeController : Controller
     {

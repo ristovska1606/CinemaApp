@@ -1,4 +1,4 @@
-namespace EShopAdminApplication.Models
+namespace CinemaAdminApp.Models
 {
     public class ErrorViewModel
     {

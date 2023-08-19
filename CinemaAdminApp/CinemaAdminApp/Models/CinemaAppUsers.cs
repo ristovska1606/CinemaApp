@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace EShopAdminApplication.Models
+namespace CinemaAdminApp.Models
 {
-    public class EShopApplicationUser : IdentityUser
+    public class CinemaAppUsers : IdentityUser
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

@@ -71,10 +71,10 @@ namespace CinemaAdminApp.Controllers
             foreach (var item in data.ProductInOrders)
             {
                 total += item.Quantity * item.Product.ProductPrice;
-                sb.AppendLine(item.Product.ProductName + " with quantity of: " + item.Quantity + " and price of: $" + item.Product.ProductPrice);
+                sb.AppendLine(item.Ticket.TicketId + " with price of: $" + item.Ticket.TicketPrice);
             }
 
-            document.Content.Replace("{{ProductList}}", sb.ToString());
+            document.Content.Replace("{{Tickets}}", sb.ToString());
             document.Content.Replace("{{TotalPrice}}", "$" + total.ToString());
 
             var stream = new MemoryStream();
@@ -84,7 +84,7 @@ namespace CinemaAdminApp.Controllers
 
             return File(stream.ToArray(), new PdfSaveOptions().ContentType, "ExportInvoice.pdf");
         }
-        public FileContentResult ExportAllOrders(Guid id)
+        public FileContentResult ExportAllOrders(Guid id, String genre)
         {
             HttpClient client = new HttpClient();
 
@@ -108,6 +108,7 @@ namespace CinemaAdminApp.Controllers
 
                 for (int i = 1; i <= result.Count(); i++)
                 {
+                                        
                     var item = result[i - 1];
 
                     worksheet.Cell(i + 1, 1).Value = item.Id.ToString();
@@ -115,10 +116,10 @@ namespace CinemaAdminApp.Controllers
                     worksheet.Cell(i + 1, 3).Value = item.Owner.LastName;
                     worksheet.Cell(i + 1, 4).Value = item.Owner.Email;
 
-                    for (int p = 1; p <= item.ProductInOrders.Count(); p++)
+                    for (int p = 1; p <= item.TicketInOrder.Count(); p++)
                     {
-                        worksheet.Cell(1, p + 4).Value = "Product-" + (p + 1);
-                        worksheet.Cell(i + 1, p + 4).Value = item.ProductInOrders.ElementAt(p - 1).Product.ProductName;
+                        worksheet.Cell(1, p + 4).Value = "Tickets-" + (p + 1);
+                        worksheet.Cell(i + 1, p + 4).Value = item.TicketInOrder.ElementAt(p - 1).Ticket.TicketId;
                     }
 
                 }

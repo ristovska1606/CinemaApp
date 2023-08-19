@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace EShopAdminApplication.Models
+namespace CinemaAdminApp.Models
 {
     public class Ticket 
     {

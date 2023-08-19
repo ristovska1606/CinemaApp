@@ -1,10 +1,10 @@
-﻿using EShopAdminApplication.Models;
+﻿using CinemaAdminApp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace EShopAdminApplication.Models
+namespace CinemaAdminApp.Models
 {
     public class TicketInOrder 
     {

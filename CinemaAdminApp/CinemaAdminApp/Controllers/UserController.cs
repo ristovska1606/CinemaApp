@@ -1,10 +1,14 @@
-﻿using EShopAdminApplication.Models;
+﻿using CinemaAdminApp.Models;
 using ExcelDataReader;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.IO;
+using System.Net.Http;
 using System.Text;
 
-namespace EShopAdminApplication.Controllers
+namespace CinemaAdminApp.Controllers
 {
     public class UserController : Controller
     {
@@ -67,12 +71,9 @@ namespace EShopAdminApplication.Controllers
                     {
                         userList.Add(new Models.User
                         {
-                            Name = reader.GetValue(0).ToString(),
-                            LastName = reader.GetValue(1).ToString(),
                             Email = reader.GetValue(2).ToString(),
                             Password = reader.GetValue(3).ToString(),
-                            ConfirmPassword = reader.GetValue(4).ToString(),
-                            PhoneNumber = reader.GetValue(5).ToString()
+                            Role = reader.GetValue(5).ToString()
                         });
                     }
                 }
